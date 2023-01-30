@@ -1,0 +1,16 @@
+// filterByPrice_HW
+
+function filterByPrice() {
+  let minPrice = document.getElementById("min-price").value;
+  let maxPrice = document.getElementById("max-price").value;
+
+  let items = document.querySelectorAll(".item");
+  for (let item of items) {
+    let itemPrice = item.querySelector(".price").innerHTML;
+    if (itemPrice >= minPrice && itemPrice <= maxPrice) {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+  }
+}
