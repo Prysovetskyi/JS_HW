@@ -1,0 +1,21 @@
+//JS_drawCart_HW
+
+function drawCart() {
+  let cart = document.querySelector(".cart");
+  let items = getCartItems();
+  
+  
+  cart.innerHTML = "";
+  
+  
+  for (let item of items) {
+    let newItem = document.createElement("div");
+    newItem.innerHTML = `
+      <img src="${item.image}" alt="${item.name}">
+      <div class="name">${item.name}</div>
+      <div class="price">${item.price}</div>
+    `;
+    cart.appendChild(newItem);
+  }
+}
+
